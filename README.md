@@ -1,4 +1,4 @@
-<h1 align="center">asynclabs zadatak</h1>
+<h1 align="center">alz</h1>
 
 ## Installation
 ```sh
