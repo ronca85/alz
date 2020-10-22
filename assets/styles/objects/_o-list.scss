@@ -1,0 +1,30 @@
+
+.o-list {
+	margin-left: -1rem;
+	margin-bottom: -1rem;
+}
+
+.o-list_item {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+
+	// the following are helper classes designed to be used only for listed items
+
+	&.-margin-bottom-1\/2-unit\@to-medium {
+		@media (max-width: $to-medium) {
+			margin-bottom: rem($unit / 2); // 30px
+		}
+	}
+
+	&.-margin-bottom-unit\@to-medium:not(:last-child) {
+		@media (max-width: $to-medium) {
+			margin-bottom: rem($unit); // 60px
+		}
+	}
+
+	&.-margin-bottom-small-unit\@from-medium:not(:last-child) {
+		@media (min-width: $from-medium) {
+			margin-bottom: rem($unit-small); // 40px
+		}
+	}
+}
