@@ -41,3 +41,17 @@ mainNavLinks.forEach( item => {
 	})
 })
 
+
+
+
+
+const inputs = document.querySelectorAll(".js-contact-form input, .js-contact-form textarea")
+
+inputs.forEach( input => {
+	input.addEventListener("focus", (e) => {
+		e.target.previousElementSibling.classList.add("focused");
+	})
+	input.addEventListener("blur", (e) => {
+		e.target.previousElementSibling.classList.remove("focused");
+	})
+})

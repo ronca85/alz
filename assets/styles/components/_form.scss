@@ -2,19 +2,36 @@
 // Form
 // ==========================================================================
 .c-form {
-
+    padding-top: em(50px);
+    padding-bottom: em(80px);
 }
 
 .c-form_item {
     position: relative;
-    margin-bottom: rem(30px);
+    margin-bottom: rem(48px);
 }
 
 // Label
 // ==========================================================================
 .c-form_label {
     display: block;
-    margin-bottom: rem(10px);
+    // margin-bottom: rem(15px);
+    color: $black;
+    pointer-events: none;
+
+    &.-input-focus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: rem(15px);
+        line-height: rem(19px);
+        transform-origin: top left;
+        transition: transform $speed $easing-long;
+
+        &.focused {
+            transform: scale(0.75) translateY(-100%);
+        }
+    }
 }
 
 // Input
@@ -22,9 +39,10 @@
 $input-icon-color: 424242; // No #
 
 .c-form_input {
-    padding: rem(10px);
-    border: 1px solid lightgray;
-    background-color: white;
+    padding: rem(15px);
+    border-bottom: 1px solid lightgray;
+    // background-color: white;
+    line-height: rem(19px);
 
     &:hover {
         border-color: darkgray;

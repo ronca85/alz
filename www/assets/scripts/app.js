@@ -4774,6 +4774,15 @@
       }
     });
   });
+  var inputs = document.querySelectorAll(".js-contact-form input, .js-contact-form textarea");
+  inputs.forEach(function (input) {
+    input.addEventListener("focus", function (e) {
+      e.target.previousElementSibling.classList.add("focused");
+    });
+    input.addEventListener("blur", function (e) {
+      e.target.previousElementSibling.classList.remove("focused");
+    });
+  });
 
   var app = new _default$1({
     modules: modules

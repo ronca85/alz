@@ -18,4 +18,18 @@
     padding-right: rem($padding);
     padding-left: rem($padding);
     max-width: rem($container-width + ($padding * 2));
+
+    @media (max-width: $to-small) {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+.o-container_backdrop {
+    @media (max-width: $to-small) {
+        margin-right: -16px;
+        margin-left: -16px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
 }
