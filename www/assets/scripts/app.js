@@ -4851,15 +4851,18 @@
 
   function handleSubmit() {
     var submitButton = document.querySelector(".js-submit-button");
-    submitButton.addEventListener("click", function (e) {
-      e.preventDefault();
 
-      if (emptyRequired === 0) {
-        resetForm();
-      }
+    if (submitButton) {
+      submitButton.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      resetFormData();
-    });
+        if (emptyRequired === 0) {
+          resetForm();
+        }
+
+        resetFormData();
+      });
+    }
   }
 
   function resetForm() {

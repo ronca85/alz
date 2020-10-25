@@ -150,13 +150,15 @@ function checkFormData() {
 
 function handleSubmit() {
 	const submitButton = document.querySelector(".js-submit-button");
-	submitButton.addEventListener("click", function(e) {
-		e.preventDefault()
-		if ( emptyRequired === 0 ) {
-			resetForm()
-		}
-		resetFormData()
-	});
+	if ( submitButton ) {
+		submitButton.addEventListener("click", function(e) {
+			e.preventDefault()
+			if ( emptyRequired === 0 ) {
+				resetForm()
+			}
+			resetFormData()
+		});
+	}
 }
 
 
