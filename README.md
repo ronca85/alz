@@ -1,5 +1,10 @@
 <h1 align="center">alz</h1>
 
+I created the main navigation and the contact page.
+
+# Limitations
+Contact form works only when refreshing the page. When navigating to the contact page from the main menu it will not work. The boilerplate I was using for this has page transitions built in and it only swaps parts of the page that change and I was unable to hook into this and make adjustments in the code.
+
 ## Installation
 ```sh
 npm install mbp -g
