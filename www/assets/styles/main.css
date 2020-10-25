@@ -609,7 +609,8 @@ textarea {
   resize: vertical; }
 
 button,
-.c-button {
+.c-button,
+.c-form_submit {
   display: inline-block;
   /* [1] */
   overflow: visible;
@@ -638,10 +639,13 @@ button,
   user-select: none; }
   button:focus, button:hover,
   .c-button:focus,
-  .c-button:hover {
+  .c-form_submit:focus,
+  .c-button:hover,
+  .c-form_submit:hover {
     text-decoration: none; }
   button:focus-visible,
-  .c-button:focus-visible {
+  .c-button:focus-visible,
+  .c-form_submit:focus-visible {
     outline: -webkit-focus-ring-color auto 1px; }
 
 @font-face {
@@ -880,19 +884,26 @@ a {
   .c-heading.-h6 {
     font-size: 1rem; }
 
-.c-button {
+
+.c-button,
+.c-form_submit {
   padding: 0.9375rem 1.25rem;
   background-color: lightgray; }
-  .c-button:focus, .c-button:hover {
+  
+  .c-button:focus,
+  .c-form_submit:focus,
+  .c-button:hover,
+  .c-form_submit:hover {
     background-color: darkgray; }
-
-.c-form {
-  padding-top: 3.125em;
-  padding-bottom: 5em; }
 
 .c-form_item {
   position: relative;
   margin-bottom: 3rem; }
+  .c-form_item.focused label {
+    transform: scale(0.75) translateY(-100%); }
+  .c-form_item.error [required] {
+    border-color: #D62A2A;
+    background-color: rgba(214, 42, 42, 0.1); }
 
 .c-form_label, .c-form_checkboxLabel, .c-form_radioLabel {
   display: block;
@@ -906,13 +917,12 @@ a {
     line-height: 1.1875rem;
     transform-origin: top left;
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    .c-form_label.-input-focus.focused, .-input-focus.focused.c-form_checkboxLabel, .-input-focus.focused.c-form_radioLabel {
-      transform: scale(0.75) translateY(-100%); }
 
 .c-form_input, .c-form_select_input, .c-form_textarea {
   padding: 0.9375rem;
   border-bottom: 1px solid lightgray;
-  line-height: 1.1875rem; }
+  line-height: 1.1875rem;
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .c-form_input:hover, .c-form_select_input:hover, .c-form_textarea:hover {
     border-color: darkgray; }
   .c-form_input:focus, .c-form_select_input:focus, .c-form_textarea:focus {
@@ -996,6 +1006,52 @@ a {
 
 .c-form_textarea {
   min-height: 12.5rem; }
+
+.c-form_submit {
+  font-family: "SwanseaBold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  color: white;
+  background-color: #1d1d1d;
+  padding: 1.25rem 5rem;
+  display: block;
+  margin-top: 3.75rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.c-form_inner {
+  padding-top: 3.125em;
+  padding-bottom: 5em;
+  position: relative;
+  overflow: hidden; }
+
+.c-form_validation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .c-form_validation.close-form {
+    opacity: 1; }
+
+.c-form_validation_message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .c-form_validation .c-form_validation_message {
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1); }
+  .c-form_validation.close-form .c-form_validation_message {
+    transform: none; }
 
 .c-site-header {
   position: fixed;
@@ -1525,6 +1581,47 @@ html:not(.ios) .c-nav_menu_inner::before {
   z-index: -1;
   -webkit-text-stroke: 2px #e5e5e5;
   color: transparent; }
+
+.c-form-loader {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #1d1d1d;
+  opacity: 0;
+  -webkit-animation: formLoader 1.6s linear infinite;
+  animation: formLoader 1.6s linear infinite;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+
+.c-form.is-loading .c-form-loader {
+  opacity: 1; }
+
+@-webkit-keyframes formLoader {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center; }
+  49% {
+    transform: scaleX(1);
+    transform-origin: left center; }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right center; }
+  to {
+    transform: scaleX(0);
+    transform-origin: right center; } }
+
+@keyframes formLoader {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center; }
+  49% {
+    transform: scaleX(1);
+    transform-origin: left center; }
+  50% {
+    transform: scaleX(1);
+    transform-origin: right center; }
+  to {
+    transform: scaleX(0);
+    transform-origin: right center; } }
 
 /* stylelint-disable */
 .u-2\:1::before {

@@ -1,0 +1,36 @@
+
+.c-form-loader {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: $black;
+	opacity: 0;
+	animation: formLoader 1.6s linear infinite;
+	transition: opacity $speed $easing-long
+}
+
+.c-form.is-loading .c-form-loader {
+	opacity: 1
+}
+
+@keyframes formLoader {
+	0% {
+		transform: scaleX(0);
+		transform-origin: left center
+	}
+
+	49% {
+		transform: scaleX(1);
+		transform-origin: left center
+	}
+
+	50% {
+		transform: scaleX(1);
+		transform-origin: right center
+	}
+
+	to {
+		transform: scaleX(0);
+		transform-origin: right center
+	}
+}

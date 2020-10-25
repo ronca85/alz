@@ -160,52 +160,61 @@
                     <section class="o-section">
                         <div class="o-container">
                             <div class="o-container_backdrop u-bg-site-white">
-                                <div class="o-layout -gutter">
-                                    <div class="o-layout_item u-1/12@from-small">
+                                <form class="c-form || js-contact-form">
+                                    <div class="o-layout -gutter">
+                                        <div class="o-layout_item u-1/12@from-small">
+                                        </div>
+                                        <div class="o-layout_item u-5/6@from-small">
+                                            <div class="c-form_inner">
+                                                <div class="o-layout -gutter">
+                                                    <div class="o-layout_item u-1/2@from-small">
+                                                        <div class="c-form_item">
+                                                            <label class="c-form_label -input-focus" for="form_name">Your Name*</label>
+                                                            <input class="c-form_input" type="text" id="form_name" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-layout_item u-1/2@from-small">
+                                                        <div class="c-form_item">
+                                                            <label class="c-form_label -input-focus" for="form_email">Email address*</label>
+                                                            <input class="c-form_input" type="email" id="form_email" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-layout_item u-1/2@from-small">
+                                                        <div class="c-form_item">
+                                                            <label class="c-form_label -input-focus" for="form_phone">Phone number</label>
+                                                            <input class="c-form_input" type="tel" id="form_phone">
+                                                        </div>
+                                                    </div>
+                                                    <div class="o-layout_item u-1/2@from-small">
+                                                        <div class="c-form_item">
+                                                            <label class="c-form_label -input-focus" for="form_company">Company</label>
+                                                            <input class="c-form_input" type="text" id="form_company">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="c-form_item">
+                                                    <label class="c-form_label -input-focus" for="form_title">Title*</label>
+                                                    <input class="c-form_input" type="text" id="form_title" required>
+                                                </div>
+                                                <div class="c-form_item">
+                                                    <label class="c-form_label -input-focus" for="form_textarea">Message*</label>
+                                                    <textarea class="c-form_textarea" id="form_textarea" required></textarea>
+                                                    </textarea>
+                                                </div>
+
+                                                <div class="c-form-loader"></div>
+                                                <button class="c-form_submit || js-submit-button" type="submit">Submit</button>
+
+                                                <div class="c-form_validation || js-validation">
+                                                    <div class="c-form_validation_message">
+                                                        <p class="c-heading -h1">Success</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="o-layout_item u-5/6@from-small">
-
-                                        <form class="c-form || js-contact-form">
-                                            <div class="o-layout -gutter">
-                                                <div class="o-layout_item u-1/2@from-small">
-                                                    <div class="c-form_item">
-                                                        <label class="c-form_label -input-focus" for="form_name">Your Name*</label>
-                                                        <input class="c-form_input" type="text" id="form_name">
-                                                    </div>
-                                                </div>
-                                                <div class="o-layout_item u-1/2@from-small">
-                                                    <div class="c-form_item">
-                                                        <label class="c-form_label -input-focus" for="form_email">Email address*</label>
-                                                        <input class="c-form_input" type="email" id="form_email">
-                                                    </div>
-                                                </div>
-                                                <div class="o-layout_item u-1/2@from-small">
-                                                    <div class="c-form_item">
-                                                        <label class="c-form_label -input-focus" for="form_phone">Phone number</label>
-                                                        <input class="c-form_input" type="tel" id="form_phone">
-                                                    </div>
-                                                </div>
-                                                <div class="o-layout_item u-1/2@from-small">
-                                                    <div class="c-form_item">
-                                                        <label class="c-form_label -input-focus" for="form_company">Company</label>
-                                                        <input class="c-form_input" type="text" id="form_company">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="c-form_item">
-                                                <label class="c-form_label -input-focus" for="form_title">Title*</label>
-                                                <input class="c-form_input" type="text" id="form_title">
-                                            </div>
-                                            <div class="c-form_item">
-                                                <label class="c-form_label -input-focus" for="form_textarea">Message*</label>
-                                                <textarea class="c-form_textarea" id="form_textarea"></textarea>
-                                            </div>
-                                            <button class="c-button || c-form_submit" type="submit">Submit</button>
-                                        </form>
-
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </section>
