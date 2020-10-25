@@ -1,7 +1,8 @@
 .c-heading {
     font-family: "SwanseaBold", sans-serif;
     line-height: $line-height-h;
-    margin-bottom: rem(30px);
+    margin-bottom: rem(40px);
+    color: $black;
 
     &.-h1 {
         font-size: rem($font-size-h1);

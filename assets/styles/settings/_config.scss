@@ -22,13 +22,14 @@ $line-height: 24px / $font-size;
 $font-family: $font-sans-serif;
 $color:       #525252;
 // Headings
-$font-size-h1:  36px  !default;
+$font-size-h1:  70px  !default;
 $font-size-h2:  28px  !default;
 $font-size-h3:  24px  !default;
 $font-size-h4:  20px  !default;
 $font-size-h5:  18px  !default;
 $font-size-h6:  16px  !default;
-$line-height-h: $line-height;
+$line-height-h: 1.2; // line-height for all headings
+
 // Weights
 $light:  300;
 $normal: 400;

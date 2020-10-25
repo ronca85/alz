@@ -43,11 +43,11 @@
 
     // Gutter modifiers
     &.-gutter {
-        margin-left: rem(-$unit);
+        margin-left: rem(-$unit-small);
     }
 
     &.-gutter-small {
-        margin-left: rem(-$unit/2);
+        margin-left: rem(-$unit/4);
     }
 
     // Horizontal aligment modifiers
@@ -90,11 +90,11 @@
 
     // Gutter modifiers
     .o-layout.-gutter > & {
-        padding-left: rem($unit);
+        padding-left: rem($unit-small);
     }
 
     .o-layout.-gutter-small > & {
-        padding-left: rem($unit/2);
+        padding-left: rem($unit/4);
     }
 
     // Vertical alignment modifiers
