@@ -1,0 +1,22 @@
+
+.c-address-card {
+	padding: em(67px) em(50px) em(40px);
+	background-color: $white;
+
+	&:hover {
+		background-color: $black;
+		color: white;
+	}
+}
+
+.c-address-card_heading {
+	font-family: "SwanseaBold", sans-serif;
+	font-size: rem(24px);
+	line-height: rem(28px);
+	margin-bottom: rem(24px);
+}
+
+.c-address-card_info {
+	font-size: rem(18px);
+	line-height: rem(30px);
+}

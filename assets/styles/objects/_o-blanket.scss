@@ -1,0 +1,38 @@
+
+.o-blanket {
+	position: relative;
+	border: 2px solid transparent;
+	transition: border $speed $easing;
+
+	&:hover {
+		a {
+			color: white;
+		}
+	}
+	
+	a {
+		position: relative;
+		z-index: 2;
+		color: $black;
+		display: inline-block;
+		text-decoration: underline;
+	}
+}
+
+.o-blanket {
+	.o-blanket_main-link {
+		position: static;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			z-index: 1;
+		}
+	}
+}

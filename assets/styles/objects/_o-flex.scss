@@ -1,0 +1,66 @@
+
+.o-flex {
+	display: flex;
+
+	// wrap
+	&.-flex-wrap\@to-medium {
+		@media (max-width: $to-medium) {
+			flex-wrap: wrap;
+		}
+	}
+	&.-flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	// column
+	&.-flex-column\@to-tiny {
+		@media (max-width: $to-tiny) {
+			flex-direction: column;
+		}
+	}
+	&.-flex-column\@to-medium {
+		@media (max-width: $to-medium) {
+			flex-direction: column;
+		}
+	}
+	&.-flex-column\@from-medium {
+		@media (min-width: $from-medium) {
+			flex-direction: column;
+		}
+	}
+
+	// children
+	> .o-flex_item {
+		display: flex;
+	}
+
+	// order
+	> .-order-1\@to-medium {
+		@media (max-width: $to-medium) {
+			order: 1;
+		}
+	}
+	> .-order-1\@from-medium {
+		@media (min-width: $from-medium) {
+			order: 1;
+		}
+	}
+}
+
+
+.-flex-column {
+	flex-direction: column;
+}
+.-justify-center {
+	justify-content: center;
+}
+.-justify-between {
+	justify-content: space-between;
+}
+.-align-center {
+	align-items: center;
+}
+.-flex-center {
+	justify-content: center;
+	align-items: center;
+}
