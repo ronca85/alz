@@ -7,15 +7,15 @@ Contact form works only when refreshing the page. When navigating to the contact
 
 ## Installation
 ```sh
-npm install mbp -g
+git clone https://github.com/ronca85/alz.git
+
+cd alz
 ```
 
 ## Usage
 ```sh
-# init your project
-mbp init
+npm install
 
-# and start it
 npm start
 ```
 
